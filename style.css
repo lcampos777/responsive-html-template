@@ -1,0 +1,168 @@
+:root{
+    --first-color: #FCFCFC;
+    --second-color: #000000;
+    --font: Arial, Helvetica, sans-serif;
+    --header-background-color: #1ABC9C;
+    --nav-background-color: #26547C;
+    --image-background-color: #FFD166;
+    --footer-background-color: #DDDDDD;
+    --aside-background-color: #EF476F;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--font);
+    font-size: 16px;
+}
+
+#header{
+    background-color: var(--header-background-color);
+    color: var(--first-color);
+    text-align: center;
+    padding: 5rem;
+}
+
+#header h1{
+    font-size: 2.5rem;
+    margin: 1.675rem 0 1.675rem;
+}
+
+#nav{
+    background-color: var(--nav-background-color);
+    text-align: center;
+}
+
+#nav a{
+    display: block;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: var(--first-color);
+}
+
+#nav a:hover{
+    background-color: var(--footer-background-color);
+    color: var(--second-color);
+}
+
+.container{
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#aside{
+    background-color: var(--aside-background-color);
+    padding: 1rem;
+}
+
+#aside h2{
+    margin: 1rem 0 1rem;
+}
+
+#aside h5{
+    margin: 1rem 0 1rem;
+}
+
+#image-1{
+    background-color: var(--image-background-color);
+    width: 100%;
+    padding: 1.5rem;
+    height: 12.5rem;
+}
+
+#aside p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#aside .image-2{
+    background-color: var(--image-background-color);
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 1.5rem;
+    height: 3.75rem;
+}
+
+#section{
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#section h2{
+    text-transform: uppercase;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#section h5{
+    padding-bottom: 1rem;
+}
+
+#section p{
+    padding-top: 1rem;
+}
+
+#footer{
+    background-color: var(--footer-background-color);
+    text-align: center;
+    padding: 3rem 5rem;
+}
+
+@media screen and (min-width: 760px) {
+    #nav{
+        text-align: left;
+        position: relative;
+    }
+
+    #nav a{
+        display: inline-block;
+        text-decoration: none;
+        color: var(--first-color);
+    }
+
+    #nav a.right{
+        position: absolute;
+        right: 0;
+    }
+
+    .container{
+        flex-direction: row;
+        padding: 0;
+    }
+
+    #aside{
+        padding: 2.5rem 1.25rem 1.25rem 1.25rem;
+        flex: 1 1 30%;
+    }
+
+    #aside h2{
+        margin: 0;
+    }
+
+    #section{
+        padding: 2.5rem 1.25rem 1.25rem 1.25rem;
+        margin: 0;
+        flex: 1 1 70%;
+    }
+
+    #section .last{
+        margin-bottom: 2rem;
+    }
+
+    #section h2{
+        padding-top: 0;
+    }
+}
